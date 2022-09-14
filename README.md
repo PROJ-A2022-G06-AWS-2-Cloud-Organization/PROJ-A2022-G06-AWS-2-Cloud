@@ -1,6 +1,15 @@
 # PROJ-A2022-G06-AWS-2-Cloud
 Repository For COMP.SE.610/620 Autumn 2022 Software Engineering Project 1 &amp; 2
 
+## Developers
+* Kosti Korhonen
+* Linnea Salmimaa
+* Rauli Virtanen
+* Miikka Mensio
+* Veera Väisänen
+* Hermanni Rytkölä
+* Onni Hartikainen
+
 This is a blank project for CDK development with TypeScript.
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
