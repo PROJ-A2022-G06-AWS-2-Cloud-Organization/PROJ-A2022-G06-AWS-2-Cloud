@@ -33,7 +33,7 @@ jobs:
       - run: yarn install
 
       - name: Synth stack
-        run: yarn --cwd packages/DeployResourceToAWS cdk synth
+        run: yarn --cwd packages/DeployResourceToAWS cdk synth "*"
 
       - name: Deploy stack
-        run: yarn --cwd packages/DeployResourceToAWS cdk deploy --require-approval never
+        run: yarn --cwd packages/DeployResourceToAWS cdk deploy "*" --require-approval never
