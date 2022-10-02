@@ -9,7 +9,7 @@ export class S3stack extends cdk.Stack {
     super(scope, id, props);
 
     // Create a S3 bucket resourse within this Stack.
-    const bucket = new s3.Bucket(this, 'MyBucket', {
+    new s3.Bucket(this, 'MyBucket', {
       bucketName: s3BucketName,
       encryption: BucketEncryption.S3_MANAGED,
       publicReadAccess: false
