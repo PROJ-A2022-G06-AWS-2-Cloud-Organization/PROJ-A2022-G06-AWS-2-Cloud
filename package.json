@@ -30,6 +30,7 @@
     "@aws-cdk/core": "1.175.0",
     "aws-cdk-lib": "2.0.0",
     "constructs": "10.0.0",
+    "eslint-html-reporter": "^0.7.4",
     "install": "^0.13.0",
     "source-map-support": "^0.5.21"
   }
