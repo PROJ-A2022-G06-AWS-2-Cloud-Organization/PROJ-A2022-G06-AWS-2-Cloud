@@ -23,7 +23,7 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 * `cdk diff`        compare deployed stack with current state
 * `cdk synth`       emits the synthesized CloudFormation template
 
-## Run instructions For IaC Deployement to AWS
+## Run instructions For IaC Deployment to AWS
 * Background info: In our repo's file bin/cdk_app1.ts there are defined all the Stacks that are deployed to the cloud.
 * The stacks are implemented in the /lib folder. 
 
@@ -37,7 +37,7 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 * Set up your AWS account by running command `aws configure` on the same terminal
 * Give the correct aws_access_key_id, aws_secret_access_key and region. Help can be found e.g. from: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html
 * Install AWS CDK, Node.js and TypeScript to your local machine
-* Run command `cdk bootstrap aws://<your_aws_account_id>/<region>` e.g. cdk bootstrap aws://123456789012/eu-north-1. This is a necessary step so that you can deploy any cloud resourses to your AWS account with AWS CDK. Ref. https://docs.aws.amazon.com/cdk/v2/guide/bootstrapping.html
+* Run command `cdk bootstrap aws://<your_aws_account_id>/<region>` e.g. cdk bootstrap aws://123456789012/eu-north-1. This is a necessary step so that you can deploy any cloud resources to your AWS account with AWS CDK. Ref. https://docs.aws.amazon.com/cdk/v2/guide/bootstrapping.html
 
 ### Deploy IaC to AWS
 * Open GitHub Actions Tab
