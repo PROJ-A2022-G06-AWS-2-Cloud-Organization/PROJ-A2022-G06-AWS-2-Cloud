@@ -30,7 +30,7 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 ### First you need to do these necessary setups:
 
 * First you have to have a AWS (Free Tier Account): https://aws.amazon.com/free/
-* Create IAM User With Admin priviliges in the AWS Console. **!NOTE!** The username must start with **cdk-**
+* Create IAM User With Admin priviliges (**AdministratorAccess** in AWS) in the AWS Console. **!NOTE!** The username must start with **cdk-**
 * Create the access key under that IAM user: https://aws.amazon.com/premiumsupport/knowledge-center/create-access-key/
 * Install AWS CLI to your local Machine: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 * Check if AWS CLI installation was successful via runnig command `aws --version` on some terminal
