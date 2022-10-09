@@ -1,5 +1,4 @@
 import { Effect, OpenIdConnectPrincipal, OpenIdConnectProvider, PolicyDocument, PolicyStatement, Role } from '@aws-cdk/aws-iam';
-import { Duration } from '@aws-cdk/core';
 import * as cdk from '@aws-cdk/core';
 
 export class linkGitHubStack extends cdk.Stack {
@@ -44,7 +43,7 @@ export class linkGitHubStack extends cdk.Stack {
       description:
         'Role assumed by GitHubPrincipal for deploying from CI using aws cdk',
       roleName: 'github-ci-role',
-      maxSessionDuration: Duration.hours(1),
+      maxSessionDuration: cdk.Duration.hours(1),
       inlinePolicies: {
         CdkDeploymentPolicy: new PolicyDocument({
           assignSids: true,
