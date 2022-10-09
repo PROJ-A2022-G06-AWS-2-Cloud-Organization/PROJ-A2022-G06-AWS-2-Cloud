@@ -14,7 +14,7 @@ export class S3stack extends cdk.Stack {
       publicReadAccess: false
     });
 
-}
+  }
 }
 
 

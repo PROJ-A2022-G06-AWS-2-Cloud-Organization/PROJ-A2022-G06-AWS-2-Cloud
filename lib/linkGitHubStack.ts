@@ -4,7 +4,7 @@ import * as cdk from '@aws-cdk/core';
 export class linkGitHubStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
-    
+
 
     const githubOrganisation = "PROJ-A2022-G06-AWS-2-Cloud-Organization";
     const repoName = "PROJ-A2022-G06-AWS-2-Cloud";
