@@ -3,7 +3,7 @@ import * as ec2 from '@aws-cdk/aws-ec2';
 import * as iam from '@aws-cdk/aws-iam';
 import { readFileSync } from 'fs';
 
-const ec2Config = {
+export const ec2Config = {
     ec2InstanceName : 'cdk-ec2-instance-v2',
     ec2SecurityKey: 'WebServerKey',
     ec2Script : './lib/ec2_scripts/install_nginx.sh',

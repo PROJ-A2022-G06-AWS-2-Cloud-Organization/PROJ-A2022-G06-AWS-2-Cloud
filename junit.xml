@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="4" failures="0" errors="0" time="12.325">
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2022-10-09T14:08:25" time="12.138" tests="4">
-    <testcase classname=" S3 Bucket Created" name=" S3 Bucket Created" time="0.002">
+<testsuites name="jest tests" tests="3" failures="0" errors="0" time="13.345">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2022-10-16T13:07:27" time="13.138" tests="3">
+    <testcase classname=" EC2 Instance and related resouces are created" name=" EC2 Instance and related resouces are created" time="0.002">
     </testcase>
-    <testcase classname=" S3 Bucket Name is Correct" name=" S3 Bucket Name is Correct" time="0.001">
+    <testcase classname=" EC2 Instance Type is Correct" name=" EC2 Instance Type is Correct" time="0.003">
     </testcase>
-    <testcase classname=" no s3 buckets should be public" name=" no s3 buckets should be public" time="0.048">
-    </testcase>
-    <testcase classname=" all s3 buckets should be s3_managed encrypted" name=" all s3 buckets should be s3_managed encrypted" time="0.03">
+    <testcase classname=" EC2 VPC Configurations are Correct" name=" EC2 VPC Configurations are Correct" time="0.003">
     </testcase>
   </testsuite>
 </testsuites>
