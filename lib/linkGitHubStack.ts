@@ -12,6 +12,7 @@ export class linkGitHubStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
+
     /**
       * Create an Identity provider for GitHub inside your AWS Account. This
       * allows GitHub to present itself to AWS IAM and assume a role.

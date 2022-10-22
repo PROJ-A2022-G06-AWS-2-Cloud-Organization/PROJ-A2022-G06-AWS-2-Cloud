@@ -1,8 +1,10 @@
 !jest.config.js
+!jest.config.ts
 eslint_report.json
 *.d.ts
 node_modules/*
 !node_modules/eslint-html-reporter/*
+junit.xml
 
 # CDK asset staging directory
 .cdk.staging
