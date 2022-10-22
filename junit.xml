@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="3" failures="0" errors="0" time="13.345">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2022-10-16T13:07:27" time="13.138" tests="3">
+    <testcase classname=" EC2 Instance and related resouces are created" name=" EC2 Instance and related resouces are created" time="0.002">
+    </testcase>
+    <testcase classname=" EC2 Instance Type is Correct" name=" EC2 Instance Type is Correct" time="0.003">
+    </testcase>
+    <testcase classname=" EC2 VPC Configurations are Correct" name=" EC2 VPC Configurations are Correct" time="0.003">
+    </testcase>
+  </testsuite>
+</testsuites>

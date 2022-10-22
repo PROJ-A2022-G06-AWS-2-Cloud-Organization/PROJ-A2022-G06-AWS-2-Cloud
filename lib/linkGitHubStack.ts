@@ -1,13 +1,17 @@
-import { Effect, OpenIdConnectPrincipal, OpenIdConnectProvider, PolicyDocument, PolicyStatement, Role } from '@aws-cdk/aws-iam';
+import { Effect, OpenIdConnectPrincipal, OpenIdConnectProvider, PolicyDocument, PolicyStatement, Role }
+from '@aws-cdk/aws-iam';
+import { Duration } from '@aws-cdk/core';
 import * as cdk from '@aws-cdk/core';
+
+const linkGitHubConfig = {
+  githubOrganisation: 'PROJ-A2022-G06-AWS-2-Cloud-Organization',
+  repoName : 'PROJ-A2022-G06-AWS-2-Cloud'
+};
 
 export class linkGitHubStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-
-    const githubOrganisation = "PROJ-A2022-G06-AWS-2-Cloud-Organization";
-    const repoName = "PROJ-A2022-G06-AWS-2-Cloud";
 
     /**
       * Create an Identity provider for GitHub inside your AWS Account. This
@@ -26,7 +30,7 @@ export class linkGitHubStack extends cdk.Stack {
       {
         StringLike: {
           'token.actions.githubusercontent.com:sub':
-            `repo:${githubOrganisation}/${repoName}:*`,
+            `repo:${linkGitHubConfig.githubOrganisation}/${linkGitHubConfig.repoName}:*`,
         },
       }
     );
