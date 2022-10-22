@@ -1,8 +1,7 @@
 name: RunStaticCodeAnalysisWithESlint
-on:
-  pull_request:
-    types:
-      - closed 
+run-name: ${{ github.ref_name }} RunStaticCodeAnalysisWithESlint
+
+on: [push]
 
 jobs:
   eslint:
