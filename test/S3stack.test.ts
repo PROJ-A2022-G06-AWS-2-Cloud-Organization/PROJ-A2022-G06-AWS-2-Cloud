@@ -2,12 +2,6 @@ import * as cdk from '@aws-cdk/core';
 import { Template } from '@aws-cdk/assertions';
 import * as s3TestStack from '../lib/S3stack';
 import '@aws-cdk/assert/jest';
-import {
-    ABSENT, notMatching, exactValue
-} from '@aws-cdk/assert';
-
-
-
 
 const app = new cdk.App();
 
