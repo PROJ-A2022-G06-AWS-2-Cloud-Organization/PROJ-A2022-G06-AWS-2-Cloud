@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
 import * as cdk from '@aws-cdk/core';
-import { S3stack } from '../lib/S3stack';
+//import { S3stack } from '../lib/S3stack';
 import { linkGitHubStack } from '../lib/linkGitHubStack';
 import { EC2Stack } from '../lib/EC2Stack';
 

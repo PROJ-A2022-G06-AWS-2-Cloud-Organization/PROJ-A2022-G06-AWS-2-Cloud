@@ -2,7 +2,6 @@ import * as cdk from '@aws-cdk/core';
 import { Template } from '@aws-cdk/assertions';
 import * as EC2TestStack from '../lib/EC2Stack';
 import '@aws-cdk/assert/jest';
-import { ABSENT, notMatching, exactValue, arrayWith } from '@aws-cdk/assert';
 
 const app = new cdk.App();
 

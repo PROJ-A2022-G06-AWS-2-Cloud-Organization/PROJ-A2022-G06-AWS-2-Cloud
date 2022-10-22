@@ -1,6 +1,5 @@
 import { Effect, OpenIdConnectPrincipal, OpenIdConnectProvider, PolicyDocument, PolicyStatement, Role }
 from '@aws-cdk/aws-iam';
-import { Duration } from '@aws-cdk/core';
 import * as cdk from '@aws-cdk/core';
 
 const linkGitHubConfig = {
