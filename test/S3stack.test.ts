@@ -4,7 +4,6 @@ import * as s3TestStack from '../lib/S3stack';
 import '@aws-cdk/assert/jest';
 import { ABSENT, notMatching, exactValue } from '@aws-cdk/assert';
 
-
 const app = new cdk.App();
 
 const stack = new s3TestStack.S3stack(app, 'MyTestStack');
