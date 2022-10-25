@@ -5,7 +5,6 @@ import { readFileSync } from 'fs';
 
 export const ec2Config = {
     ec2InstanceName : 'cdk-ec2-instance-v2',
-    ec2SecurityKey: 'WebServerKey',
     ec2Script : './lib/ec2_scripts/install_nginx.sh',
     scriptCharEncoding : 'utf-8'
 };
@@ -13,6 +12,10 @@ export const ec2Config = {
 export class EC2Stack extends cdk.Stack {
     constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
         super(scope, id, props);
+
+        // create webserver keypair for the ec2 Instance
+        const ec2SecurityKey = new ec2.CfnKeyPair(this, 'myWebServerKey', {
+            keyName: 'WebServerKey2'});
 
         // 👇 create VPC in which we'll launch the Instance
         const vpc = new ec2.Vpc(this, ec2Config.ec2InstanceName, {
@@ -77,7 +80,7 @@ export class EC2Stack extends cdk.Stack {
                 storage: ec2.AmazonLinuxStorage.GENERAL_PURPOSE,
                 cpuType: ec2.AmazonLinuxCpuType.X86_64
             }),
-            keyName: ec2Config.ec2SecurityKey,
+            keyName: ec2SecurityKey.keyName,
         });
 
         //  load contents of script
