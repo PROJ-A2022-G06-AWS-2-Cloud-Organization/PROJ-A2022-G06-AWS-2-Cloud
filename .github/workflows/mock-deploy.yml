@@ -19,8 +19,4 @@ jobs:
       - uses: actions/checkout@v1
       - name: "Wait for 15s and have 25% chance to fail"
         run: |
-          if $(( RANDOM % 2)); then
-            echo true
-          else
-            echo false
-          fi
+          echo $(( RANDOM % 2))
