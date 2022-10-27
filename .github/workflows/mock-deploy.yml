@@ -1,0 +1,33 @@
+name: MockDeployingResourcesToAWS
+run-name: Mock AWS build action
+on:
+  workflow_dispatch:
+    inputs:
+      AWS_ACCESS_KEY_ID:
+        description: "Access Key ID with Permissions to deploy IAM, and OIDC"
+        required: true
+      AWS_SECRET_ACCESS_KEY:
+        description: "Secret Access Key with Permissions to deploy IAM, and OIDC"
+        required: true
+      AWS_REGION:
+        description: "Region to deploy to."
+        required: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: "Waiting for 15s"
+        run: sleep 15
+
+      - name: "Fail half of the time"
+        run: |
+          if [[ $(( RANDOM % 2)) == 0 ]]; then
+            echo "Failing step"
+            exit 1
+          else
+            echo "Step successful"
+            exit 0
+          fi
