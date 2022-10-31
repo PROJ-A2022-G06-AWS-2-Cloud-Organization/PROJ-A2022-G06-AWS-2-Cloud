@@ -5,13 +5,13 @@ on:
     inputs:
       AWS_ACCESS_KEY_ID:
         description: "Access Key ID with Permissions to deploy IAM, and OIDC"
-        required: true
+        required: false
       AWS_SECRET_ACCESS_KEY:
         description: "Secret Access Key with Permissions to deploy IAM, and OIDC"
-        required: true
+        required: false
       AWS_REGION:
         description: "Region to deploy to."
-        required: true
+        required: false
 
 jobs:
   deploy:
