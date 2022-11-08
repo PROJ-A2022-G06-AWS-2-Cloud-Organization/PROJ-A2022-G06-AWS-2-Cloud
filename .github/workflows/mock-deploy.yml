@@ -30,7 +30,7 @@ jobs:
             exit 0
           fi
           
-      - name: "Configure aws credentials"
+      - name: "Configure aws credentials2"
         run: |
           sleep 12
           if [[ $(( RANDOM % 10)) == 0 ]]; then
