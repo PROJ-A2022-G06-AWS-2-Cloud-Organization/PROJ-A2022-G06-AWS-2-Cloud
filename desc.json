@@ -1,5 +1,5 @@
 {
-	"description": "Deploy a working EC2 instance with key pair and linGitHub stack."
+	"description": "Deploy a working EC2 instance with key pair and linGitHub stack.",
 	"parameters": 
 		[
 			{
