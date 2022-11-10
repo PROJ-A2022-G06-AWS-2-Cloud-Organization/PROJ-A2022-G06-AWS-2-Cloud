@@ -25,6 +25,6 @@
 				"name": "Bonus dropdown",
 				"type": "dropdown",
 				"options": ["sa","to","ra","re"]
-			},
+			}
 		 ]
 }
