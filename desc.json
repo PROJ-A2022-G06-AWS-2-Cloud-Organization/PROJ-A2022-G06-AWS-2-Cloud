@@ -1,3 +1,21 @@
 {
 	"description": "Deploy a working EC2 instance with key pair and linGitHub stack."
+	"parameters": 
+		[
+			{
+				"name": "Region",
+				"type": "dropdown",
+				"options": ["us-west-1", "us-west-2", "eu-west-1", "eu-west-2", "eu-north-1", "eu-south-1", "ap-northeast-3"]
+			},
+
+			{
+				"name": "Access key"
+			},
+
+			{
+				"name": "Secret key",
+				"type": "password"
+			},
+
+		 ]
 }
