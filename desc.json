@@ -1,3 +1,30 @@
 {
-	"description": "This is also a template for a EC 2 instance."
+	"description": "This is also a template for an EC 2 instance. There is an additional dropdown parameter and an additional entry field.",
+	"parameters": 
+		[
+			{
+				"name": "Region",
+				"type": "dropdown",
+				"options": ["us-west-1", "us-west-2", "eu-west-1", "eu-west-2", "eu-north-1", "eu-south-1", "ap-northeast-3"]
+			},
+
+			{
+				"name": "Access key"
+			},
+
+			{
+				"name": "Secret key",
+				"type": "password"
+			},
+			
+			{
+				"name": "Bonus parameter",
+			},
+			
+			{
+				"name": "Bonus dropdown",
+				"type": "dropdown",
+				"options": ["sa","to","ra","re"]
+			},
+		 ]
 }
