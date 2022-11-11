@@ -1,3 +1,23 @@
 {
-	"description": "WRITE THE TEMPLATE DESCRIPTION HERE"
+	"description": "WRITE THE TEMPLATE DESCRIPTION HERE",
+	"parameters": 
+	[
+		{
+			"displayName": "Region",
+			"internalName": "AWS_REGION",
+			"type": "dropdown",
+			"options": ["us-west-1", "us-west-2", "eu-west-1", "eu-west-2", "eu-north-1", "eu-south-1", "ap-northeast-3"]
+		},
+
+		{
+			"displayName": "Access key",
+			"internalName": "AWS_ACCESS_KEY_ID"
+		},
+
+		{
+			"displayName": "Secret key",
+			"internalName": "AWS_SECRET_ACCESS_KEY",
+			"type": "password"
+		}
+	]
 }
