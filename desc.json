@@ -2,7 +2,7 @@
 	"description": "This template builds an EC2 instance.",
 	"parameters": 
 		[
-{
+			{
 				"displayName": "Region",
 				"internalName": "AWS_REGION",
 				"type": "dropdown",
@@ -19,5 +19,6 @@
 				"internalName": "AWS_SECRET_ACCESS_KEY",
 				"type": "password"
 			}
+		]
 	
 }
