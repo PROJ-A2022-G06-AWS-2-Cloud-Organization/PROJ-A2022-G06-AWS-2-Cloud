@@ -1,5 +1,5 @@
 {
-	"description": "WRITE THE TEMPLATE DESCRIPTION HERE",
+	"description": "AWS CDK Template that deploys a free-tier eligible EC2 instance to the cloud.",
 	"parameters": 
 	[
 		{
