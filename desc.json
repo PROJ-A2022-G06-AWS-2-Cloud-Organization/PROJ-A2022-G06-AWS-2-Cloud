@@ -1,5 +1,5 @@
 {
-	"description": "This is also a template for an EC 2 instance. There is an additional dropdown parameter and an additional entry field.",
+	"description": "This is also a template for an EC2 instance. There is an additional dropdown parameter and an additional entry field.",
 	"parameters": 
 		[
 			{
