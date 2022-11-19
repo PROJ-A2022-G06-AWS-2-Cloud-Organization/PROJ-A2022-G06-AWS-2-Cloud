@@ -3,6 +3,11 @@
 	"parameters": 
 	[
 		{
+			"displayName": "Instance name",
+			"internalName": "RESOURCE_NAME"
+		},
+		
+		{
 			"displayName": "Region",
 			"internalName": "AWS_REGION",
 			"type": "dropdown",
