@@ -4,18 +4,27 @@ import * as iam from '@aws-cdk/aws-iam';
 import { readFileSync } from 'fs';
 
 export const ec2Config = {
-    ec2InstanceName : 'cdk-ec2-instance-v2',
-    ec2Script : './lib/ec2_scripts/install_nginx.sh',
-    scriptCharEncoding : 'utf-8'
+    ec2InstanceName: 'cdk-ec2-instance-v2',
+    ec2Script: './lib/ec2_scripts/install_nginx.sh',
+    scriptCharEncoding: 'utf-8'
 };
+
+
 
 export class EC2Stack extends cdk.Stack {
     constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
         super(scope, id, props);
 
+        // 👇 parameter of type String that is given in github actions
+        const dynamicResourceName = new cdk.CfnParameter(this, 'dynamicResourceName', {
+            type: 'String',
+            description: 'The name of the reource that is deployed to AWS',
+        });
+
         // create webserver keypair for the ec2 Instance
         const ec2SecurityKey = new ec2.CfnKeyPair(this, 'myWebServerKey', {
-            keyName: 'WebServerKey2'});
+            keyName: 'WebServerKey2'
+        });
 
         // 👇 create VPC in which we'll launch the Instance
         const vpc = new ec2.Vpc(this, ec2Config.ec2InstanceName, {
@@ -60,6 +69,7 @@ export class EC2Stack extends cdk.Stack {
 
         // 👇 create the EC2 Instance
         const ec2Instance = new ec2.Instance(this, 'ec2-instance-t3-micro', {
+            instanceName: dynamicResourceName.valueAsString,
             vpc,
             vpcSubnets: {
                 subnetType: ec2.SubnetType.PUBLIC,

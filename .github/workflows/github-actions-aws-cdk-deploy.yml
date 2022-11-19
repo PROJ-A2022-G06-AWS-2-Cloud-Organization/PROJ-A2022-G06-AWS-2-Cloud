@@ -11,6 +11,9 @@ on:
       AWS_REGION:
         description: "Region to deploy to."
         required: true
+      RESOURCE_NAME:
+        description: "The name of the resource"
+        required: true
 
 jobs:
   deploy:
@@ -33,7 +36,7 @@ jobs:
       - run: yarn install
 
       - name: Synth stack
-        run: yarn --cwd packages/DeployResourceToAWS cdk synth "*"
+        run: yarn --cwd packages/DeployResourceToAWS cdk synth "*" --parameters dynamicResourceName=${{ github.event.inputs.RESOURCE_NAME }}
 
       - name: Deploy stack
-        run: yarn --cwd packages/DeployResourceToAWS cdk deploy "*" --require-approval never
+        run: yarn --cwd packages/DeployResourceToAWS cdk deploy "*" --require-approval never --parameters dynamicResourceName=${{ github.event.inputs.RESOURCE_NAME }}
