@@ -12,6 +12,9 @@ on:
       AWS_REGION:
         description: "Region to deploy to."
         required: false
+      RESOURCE_NAME:
+        description: "Resource name"
+        required: false
 
 jobs:
   deploy:
