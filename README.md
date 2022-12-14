@@ -47,3 +47,6 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 * Click **Run workflow**
 * If the flow ran successfully, the resource should be deployed to your AWS
 
+
+## Running unit tests locally
+* Open project root in terminal and run command `npm test` to run all the unit tests in this project  
